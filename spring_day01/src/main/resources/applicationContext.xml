@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="bookDao" class="cn.shijianka.dao.impl.BookDaoImpl" scope=""></bean>
+    <bean id="bookService" class="cn.shijianka.service.impl.BookServiceImpl">
+<!--        配置service与dao的关系-->
+
+<!--       name="bookDao" 就是要配置的属性-->
+<!--        ref="bookDao"是对应的bean的id-->
+        <property name="bookDao" ref="bookDao"/>
+    </bean>
+</beans>
